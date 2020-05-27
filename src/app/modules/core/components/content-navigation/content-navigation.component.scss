@@ -1,0 +1,29 @@
+@import "../../../../../scss/variables/theme-colours";
+
+.content-nav {
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.content-tab {
+  height: 100%;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  cursor: pointer;
+  transition: background-color .2s ease;
+  &:hover {
+    background-color: rgba($primary, 0.6);
+  }
+}
+
+.content-tab-active {
+  background-color: rgba($primary, 0.6);
+  border-bottom: 2px solid $info  ;
+}

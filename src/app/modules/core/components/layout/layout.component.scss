@@ -3,7 +3,6 @@
 }
 
 .wrapper {
-  //width: 100%;
   height: 90%;
   max-height: 90%;
   overflow: hidden;
@@ -18,10 +17,9 @@
   max-height: 100%;
   overflow: hidden;
   border-right: 1px solid rgba(255, 255, 255, 0.4);
-  border-top: 26px solid rgba(255, 255, 255, 0.4);
+  border-top: 3px solid rgba(255, 255, 255, 0.4);
   position: relative;
   z-index: 20;
-  padding: .75rem;
 }
 
 .content {
@@ -31,7 +29,7 @@
   overflow-y: auto;
 }
 
-.content-nav {
+.content-navigation {
   height: 3rem;
   width: 100%;
   box-shadow: 0 6px 4px -1px rgba(0, 0, 0, 0.3);

@@ -14,7 +14,9 @@ h5,
 h6,
 pre,
 span,
-small {
+small,
+button,
+i {
   color: $text;
 }
 
@@ -31,6 +33,10 @@ hr {
   color: $primary
 }
 
-.nav, .content-nav, .app-footer {
+.nav,
+.content-navigation,
+.app-footer,
+.vertical-nav,
+.horizontal-nav {
   background-color: $card_bg;
 }

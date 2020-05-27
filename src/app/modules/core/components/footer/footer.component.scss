@@ -1,0 +1,21 @@
+@import "../../../../../scss/variables/theme-colours";
+
+.footer-nav {
+  height: 100%;
+  width: 100%;
+}
+
+.footer-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background: none;
+  padding: .75rem;
+  font-size: .8rem;
+  width: 6.5rem;
+  cursor: pointer;
+  &:hover {
+    background-color: rgba($primary, 0.6);
+  }
+}
