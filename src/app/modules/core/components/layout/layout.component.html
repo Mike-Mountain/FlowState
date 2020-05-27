@@ -1,14 +1,17 @@
-<nav class="app-nav">
-  <!--// TODO: Call app-navigation component-->
-</nav>
+<section class="app-navigation">
+  <app-primary-navigation></app-primary-navigation>
+</section>
 <section class="wrapper">
   <aside class="side-navigation">
-    <!--// TODO: Call app-side-navigation component-->
+    <app-side-navigation></app-side-navigation>
   </aside>
   <main class="content">
-    <nav class="content-nav">
-      <!--// TODO: Call app-content-navigation component-->
-    </nav>
+    <section class="content-nav">
+      <app-content-navigation></app-content-navigation>
+    </section>
     <router-outlet></router-outlet>
   </main>
 </section>
+<footer class="app-footer">
+  <app-footer></app-footer>
+</footer>

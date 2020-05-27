@@ -1,0 +1,36 @@
+@import "dark-theme";
+
+body {
+  background-color: $page_bg;
+}
+
+a,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+span,
+small {
+  color: $text;
+}
+
+.card {
+  background-color: $card_bg;
+}
+
+.card-title {
+  color: $card_title;
+}
+
+hr {
+  border-color: $primary;
+  color: $primary
+}
+
+.nav, .content-nav, .app-footer {
+  background-color: $card_bg;
+}
