@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-layout',
@@ -7,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LayoutComponent implements OnInit {
 
-  constructor() { }
+  public panelIsOpen = true;
+
+  constructor() {
+  }
 
   ngOnInit(): void {
   }
 
+  public toggleSidePanel(isOpen: boolean) {
+    console.log(isOpen);
+    this.panelIsOpen = isOpen;
+  }
 }

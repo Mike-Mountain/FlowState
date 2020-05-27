@@ -2,10 +2,13 @@
   <app-primary-navigation></app-primary-navigation>
 </section>
 <section class="wrapper">
-  <aside class="side-navigation">
-    <app-side-navigation></app-side-navigation>
+  <aside class="side-navigation" [ngClass]="panelIsOpen ? 'panel-open' : 'panel-closed'">
+    <app-side-navigation
+      [panelIsOpen]="panelIsOpen"
+      (toggleEvent)="toggleSidePanel($event)"
+    ></app-side-navigation>
   </aside>
-  <main class="content">
+  <main class="content" [ngClass]="panelIsOpen ? 'content-small' : 'content-large'">
     <section class="content-navigation">
       <app-content-navigation></app-content-navigation>
     </section>

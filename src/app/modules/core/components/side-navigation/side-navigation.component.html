@@ -2,30 +2,51 @@
   <div class="side-nav-inner">
     <nav class="vertical-nav">
       <ul class="vertical-navigation">
-        <li class="vertical-tab">
+
+        <li
+          class="vertical-tab"
+          [class.vertical-tab-active]="panelState.projects"
+          (click)="togglePanel('projects')"
+        >
           <small>
             <i class="fas fa-folder"></i>
             1: Project
           </small>
         </li>
 
-        <li class="vertical-tab">
+        <li
+          class="vertical-tab"
+          [class.vertical-tab-active]="panelState.blog"
+          (click)="togglePanel('blog')"
+        >
           <small>
             <i class="fas fa-newspaper"></i>
             2: Blog
           </small>
         </li>
 
-        <li class="vertical-tab">
+        <li
+          class="vertical-tab"
+          [class.vertical-tab-active]="panelState.favorites"
+          (click)="togglePanel('favorites')"
+        >
           <small>
             <i class="fas fa-star"></i>
             3: Favorites
           </small>
         </li>
+
       </ul>
     </nav>
-    <div class="side-nav-content">
-      <div class="nav-projects">
+    <div class="side-nav-content" *ngIf="panelIsOpen">
+
+      <div
+        *ngIf="panelState.projects"
+        class="nav-projects"
+        [class.h-100]="numberSelected === 1"
+        [class.h-50]="numberSelected === 2"
+        [class.h-33]="numberSelected === 3"
+      >
         <div class="horizontal-nav">
           <div class="flex-between h-100">
             <div class="flex-start  ml-4">
@@ -33,13 +54,22 @@
               <small class="mx-2">Projects</small>
             </div>
             <div class="flex-end">
-              <i class="fas fa-sm fa-minus"></i>
+              <button class="close-panel flex-center" (click)="togglePanel('projects')">
+                <i class="fas fa-sm fa-minus"></i>
+              </button>
             </div>
           </div>
         </div>
         <p>Project Nav Works!</p>
       </div>
-      <div class="nav-blog">
+
+      <div
+        *ngIf="panelState.blog"
+        class="nav-blog"
+        [class.h-100]="numberSelected === 1"
+        [class.h-50]="numberSelected === 2"
+        [class.h-33]="numberSelected === 3"
+      >
         <div class="horizontal-nav">
           <div class="flex-between h-100">
             <div class="flex-start ml-4">
@@ -47,13 +77,22 @@
               <small class="mx-2">Blog</small>
             </div>
             <div class="flex-start">
-              <i class="fas fa-sm fa-minus"></i>
+              <button class="close-panel flex-center" (click)="togglePanel('blog')">
+                <i class="fas fa-sm fa-minus"></i>
+              </button>
             </div>
           </div>
         </div>
         <p>Blog nav works!</p>
       </div>
-      <div class="nav-favorites">
+
+      <div
+        *ngIf="panelState.favorites"
+        class="nav-favorites"
+        [class.h-100]="numberSelected === 1"
+        [class.h-50]="numberSelected === 2"
+        [class.h-33]="numberSelected === 3"
+      >
         <div class="horizontal-nav">
           <div class="flex-between h-100">
             <div class="flex-start ml-3">
@@ -61,12 +100,15 @@
               <small class="mx-2">Favorites</small>
             </div>
             <div class="flex-end">
-              <i class="fas fa-sm fa-minus"></i>
+              <button class="close-panel flex-center" (click)="togglePanel('favorites')">
+                <i class="fas fa-sm fa-minus"></i>
+              </button>
             </div>
           </div>
         </div>
         <p>Favorites nav works!</p>
       </div>
+
     </div>
   </div>
 </div>
