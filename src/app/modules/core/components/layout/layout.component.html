@@ -5,7 +5,7 @@
   <aside class="side-navigation" [ngClass]="panelIsOpen ? 'panel-open' : 'panel-closed'">
     <app-side-navigation
       [panelIsOpen]="panelIsOpen"
-      (toggleEvent)="toggleSidePanel($event)"
+      (toggleEvent)="panelIsOpen = $event"
     ></app-side-navigation>
   </aside>
   <main class="content" [ngClass]="panelIsOpen ? 'content-small' : 'content-large'">
@@ -17,4 +17,5 @@
 </section>
 <footer class="app-footer">
   <app-footer></app-footer>
+  <app-footer-content></app-footer-content>
 </footer>

@@ -16,12 +16,14 @@ pre,
 span,
 small,
 button,
-i {
+i,
+.card-body {
   color: $text;
 }
 
 .card {
   background-color: $card_bg;
+  box-shadow: 0 2px 4px rgba($dark, 0.8), 0 0 3px 1px rgba(0, 0, 0, 0.8);
 }
 
 .card-title {

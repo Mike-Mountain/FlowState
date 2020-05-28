@@ -14,9 +14,4 @@ export class LayoutComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
-  public toggleSidePanel(isOpen: boolean) {
-    console.log(isOpen);
-    this.panelIsOpen = isOpen;
-  }
 }

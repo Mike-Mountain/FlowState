@@ -1,0 +1,25 @@
+@import "../variables/theme-colours";
+
+.card {
+  border-radius: 4px;
+}
+
+.card-title {
+  padding: .75rem;
+  position: relative;
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: .5rem;
+    margin: auto;
+    width: 75%;
+    height: 1px;
+    background-color: white;
+  }
+}
+
+.card-body {
+  padding: .75rem;
+}
