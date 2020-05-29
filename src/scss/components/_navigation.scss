@@ -45,3 +45,23 @@
   background-color: rgba($primary, 0.6);
   border-bottom-color: $info;
 }
+
+.side-nav-link {
+  border: none;
+  width: 100%;
+  background: transparent;
+  cursor: pointer;
+  padding: .75rem;
+  font-size: .8rem;
+  transition: background-color .2s ease;
+  border-left: 3px solid transparent;
+  text-align: left;
+  &:hover {
+    background-color: rgba($primary, 0.6);
+  }
+}
+
+.side-nav-link-active {
+  background-color: rgba($primary, 0.6);
+  border-left-color: $info;
+}

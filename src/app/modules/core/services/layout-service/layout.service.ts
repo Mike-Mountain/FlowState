@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 import {BehaviorSubject, Observable} from 'rxjs';
-import {LayoutState, PanelState} from '../models/layout-state.inteface';
+import {LayoutState, PanelState} from '../../models/layout-state.inteface';
 
 @Injectable({
   providedIn: 'root'
@@ -20,6 +20,7 @@ export class LayoutService {
     sidePanelHeight: 100,
     contentPanelWidth: 80,
     contentPanelHeight: 100,
+    contentNavigationHeight: 0,
     bottomPanelHeight: 0
   };
   private initialSideState: PanelState = {

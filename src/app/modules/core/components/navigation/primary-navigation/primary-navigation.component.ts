@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {ProjectsQuery} from '../../../../projects/store/projects.query';
 
 @Component({
   selector: 'app-primary-navigation',
@@ -7,7 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PrimaryNavigationComponent implements OnInit {
 
-  constructor() { }
+  dropdownIsActive: boolean;
+  selectedProject: string;
+
+  constructor(public projectsQuery: ProjectsQuery) {
+  }
 
   ngOnInit(): void {
   }

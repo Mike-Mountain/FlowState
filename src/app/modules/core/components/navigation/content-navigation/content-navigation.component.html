@@ -1,13 +1,14 @@
 <div class="content-nav">
-  <button class="content-tab content-tab-active">
-    <i class="fab fa-2x fa-angular mr-2"></i>
-    Project One
-    <i class="fas fa-sm fa-times ml-2"></i>
-  </button>
-
-  <button class="content-tab">
-    <i class="fab fa-2x fa-angular mr-2"></i>
-    Project Two
-    <i class="fas fa-sm fa-times ml-2"></i>
-  </button>
+  <ng-container *ngIf="tabsService.getTabsList() | async as tabs">
+    <ng-container *ngFor="let tab of tabs; let i = index">
+      <button class="content-tab content-tab-active" [routerLink]="tab.route">
+        <i class="fab fa-2x fa-angular mr-2"></i>
+        {{tab.label}}
+        <i
+          class="fas fa-sm fa-times ml-2"
+          (click)="closeTab(tab, tabs, i)"
+        ></i>
+      </button>
+    </ng-container>
+  </ng-container>
 </div>

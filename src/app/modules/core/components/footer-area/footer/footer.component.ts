@@ -1,6 +1,6 @@
 import {Component, ElementRef, Input, NgZone, OnInit, Renderer2, ViewChild} from '@angular/core';
 import {DatePipe} from '@angular/common';
-import {LayoutService} from '../../../services/layout.service';
+import {LayoutService} from '../../../services/layout-service/layout.service';
 import {LayoutState} from '../../../models/layout-state.inteface';
 
 @Component({

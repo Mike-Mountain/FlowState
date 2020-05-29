@@ -12,6 +12,7 @@
         [panelState]="panelState"
       ></app-vertical-navigation>
       <app-side-navigation
+        [layoutState]="layoutState"
         [panelState]="panelState"
         class="w-100"
         [class]="'h-' + layoutState.sidePanelHeight"
@@ -21,8 +22,14 @@
       class="content"
       [class]="['w-' + layoutState.contentPanelWidth, 'h-' + layoutState.contentPanelHeight]"
     >
-      <section class="content-navigation">
-        <app-content-navigation></app-content-navigation>
+      <section
+        class="content-navigation"
+        [class.content-nav-open]="layoutState.contentNavigationHeight > 0"
+        [class.content-nav-closed]="layoutState.contentNavigationHeight <= 0"
+      >
+        <app-content-navigation
+          [layoutState]="layoutState"
+        ></app-content-navigation>
       </section>
       <router-outlet></router-outlet>
     </main>

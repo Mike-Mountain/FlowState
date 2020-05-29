@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {LayoutService} from '../../../services/layout.service';
+import {LayoutService} from '../../../services/layout-service/layout.service';
 import {LayoutState, PanelState} from '../../../models/layout-state.inteface';
 
 @Component({

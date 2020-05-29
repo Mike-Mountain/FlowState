@@ -3,6 +3,7 @@ export interface LayoutState {
   sidePanelHeight: number;
   contentPanelWidth: number;
   contentPanelHeight: number;
+  contentNavigationHeight: number;
   bottomPanelHeight: number;
 }
 
