@@ -1,40 +1,60 @@
 <div class="footer-nav flex-center">
-  <div class="flex-start ml-2 w-50">
-    <button class="footer-button">
+  <div class="flex-start ml-2 w-50 h-100">
+    <button
+      class="content-tab"
+      (click)="toggleVitaePanel('skills')"
+      [class.content-tab-active]="layoutService.activeVitaeTab === 'skills'"
+    >
       <i class="fas fa-check fa-sm mr-1"></i>
       Skills
     </button>
 
-    <button class="footer-button">
+    <button
+      class="content-tab"
+      (click)="toggleVitaePanel('hobbies')"
+      [class.content-tab-active]="layoutService.activeVitaeTab === 'hobbies'"
+    >
       <i class="fas fa-paper-plane fa-sm mr-1"></i>
       Hobbies
     </button>
 
-    <button class="footer-button">
+    <button
+      class="content-tab"
+      (click)="toggleVitaePanel('experience')"
+      [class.content-tab-active]="layoutService.activeVitaeTab === 'experience'"
+    >
       <i class="fas fa-tasks fa-sm mr-1"></i>
       Experience
     </button>
 
-    <button class="footer-button">
+    <button
+      class="content-tab"
+      (click)="toggleVitaePanel('education')"
+      [class.content-tab-active]="layoutService.activeVitaeTab === 'education'"
+    >
       <i class="fas fa-graduation-cap fa-sm mr-1"></i>
       Education
     </button>
 
-    <button class="footer-button">
+    <button
+      class="content-tab"
+      (click)="toggleVitaePanel('contact')"
+      [class.content-tab-active]="layoutService.activeVitaeTab === 'contact'"
+    >
       <i class="fas fa-envelope fa-sm mr-1"></i>
       Contact
     </button>
   </div>
 
-  <div class="flex-end w-50">
-    <button class="footer-button">
+  <div class="flex-end w-50 h-100">
+    <button class="content-tab">
       <i class="fas fa-code-branch fa-sm mr-2"></i>
       Github
     </button>
 
-    <button class="footer-button" #date></button>
+    <button class="content-tab" #date></button>
 
-    <button class="footer-button">
+    <button class="content-tab">
       <i class="fas fa-palette fa-sm mr-1"></i>
       Theme
     </button>

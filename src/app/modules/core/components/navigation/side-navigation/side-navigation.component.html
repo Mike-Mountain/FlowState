@@ -1,45 +1,6 @@
-<div class="side-nav">
+<div class="side-nav" *ngIf="layoutService.getNumberSelected() | async as numberSelected">
   <div class="side-nav-inner">
-    <nav class="vertical-nav">
-      <ul class="vertical-navigation">
-
-        <li
-          class="vertical-tab"
-          [class.vertical-tab-active]="panelState.projects"
-          (click)="togglePanel('projects')"
-        >
-          <small>
-            <i class="fas fa-folder"></i>
-            1: Project
-          </small>
-        </li>
-
-        <li
-          class="vertical-tab"
-          [class.vertical-tab-active]="panelState.blog"
-          (click)="togglePanel('blog')"
-        >
-          <small>
-            <i class="fas fa-newspaper"></i>
-            2: Blog
-          </small>
-        </li>
-
-        <li
-          class="vertical-tab"
-          [class.vertical-tab-active]="panelState.favorites"
-          (click)="togglePanel('favorites')"
-        >
-          <small>
-            <i class="fas fa-star"></i>
-            3: Favorites
-          </small>
-        </li>
-
-      </ul>
-    </nav>
-    <div class="side-nav-content" *ngIf="panelIsOpen">
-
+    <div class="side-nav-content">
       <div
         *ngIf="panelState.projects"
         class="nav-projects"
@@ -54,7 +15,7 @@
               <small class="mx-2">Projects</small>
             </div>
             <div class="flex-end">
-              <button class="close-panel flex-center" (click)="togglePanel('projects')">
+              <button class="close-panel flex-center" (click)="togglePanel('projects', panelState)">
                 <i class="fas fa-sm fa-minus"></i>
               </button>
             </div>
@@ -77,7 +38,7 @@
               <small class="mx-2">Blog</small>
             </div>
             <div class="flex-start">
-              <button class="close-panel flex-center" (click)="togglePanel('blog')">
+              <button class="close-panel flex-center" (click)="togglePanel('blog', panelState)">
                 <i class="fas fa-sm fa-minus"></i>
               </button>
             </div>
@@ -100,7 +61,7 @@
               <small class="mx-2">Favorites</small>
             </div>
             <div class="flex-end">
-              <button class="close-panel flex-center" (click)="togglePanel('favorites')">
+              <button class="close-panel flex-center" (click)="togglePanel('favorites', panelState)">
                 <i class="fas fa-sm fa-minus"></i>
               </button>
             </div>

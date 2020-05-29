@@ -1,6 +1,6 @@
 @import "dark-theme";
 
-body {
+body, .vitae-container {
   background-color: $page_bg;
 }
 
@@ -39,6 +39,7 @@ hr {
 .content-navigation,
 .app-footer,
 .vertical-nav,
-.horizontal-nav {
+.horizontal-nav,
+.vitae-bar {
   background-color: $card_bg;
 }

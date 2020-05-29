@@ -5,8 +5,9 @@ import {RouterModule} from '@angular/router';
 import {PrimaryNavigationComponent} from './components/navigation/primary-navigation/primary-navigation.component';
 import {SideNavigationComponent} from './components/navigation/side-navigation/side-navigation.component';
 import {ContentNavigationComponent} from './components/navigation/content-navigation/content-navigation.component';
-import { FooterContentComponent } from './components/footer-area/footer-content/footer-content.component';
 import {FooterComponent} from './components/footer-area/footer/footer.component';
+import {VitaeModule} from '../vitae/vitae.module';
+import { VerticalNavigationComponent } from './components/navigation/vertical-navigation/vertical-navigation.component';
 
 
 @NgModule({
@@ -16,11 +17,12 @@ import {FooterComponent} from './components/footer-area/footer/footer.component'
     SideNavigationComponent,
     ContentNavigationComponent,
     FooterComponent,
-    FooterContentComponent
+    VerticalNavigationComponent,
   ],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    VitaeModule
   ],
   exports: [
     LayoutComponent

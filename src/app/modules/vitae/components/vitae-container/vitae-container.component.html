@@ -1,0 +1,31 @@
+<section
+  class="vitae-container"
+  [class]="'h-' + layoutState.bottomPanelHeight"
+  [ngClass]="layoutState.bottomPanelHeight > 0 ? ['z-index-high', 'opacity-full'] : ['z-index-low', 'opacity-none']"
+>
+  <div class="vitae-bar flex-between">
+    <h4 class="ml-4 text-capitalize">{{layoutService.activeVitaeTab}}</h4>
+    <button class="close-panel flex-center mr-2" (click)="toggleVitaeContainer()">
+      <i class="fas fa-sm fa-minus"></i>
+    </button>
+  </div>
+  <div class="vitae-content">
+    <ng-container [ngSwitch]="layoutService.activeVitaeTab">
+      <ng-container *ngSwitchCase="'skills'">
+        <app-skills></app-skills>
+      </ng-container>
+      <ng-container *ngSwitchCase="'hobbies'">
+        <app-hobbies></app-hobbies>
+      </ng-container>
+      <ng-container *ngSwitchCase="'experience'">
+        <app-experience></app-experience>
+      </ng-container>
+      <ng-container *ngSwitchCase="'education'">
+        <app-education></app-education>
+      </ng-container>
+      <ng-container *ngSwitchCase="'contact'">
+        <app-contact></app-contact>
+      </ng-container>
+    </ng-container>
+  </div>
+</section>

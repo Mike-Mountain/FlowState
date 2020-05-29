@@ -1,0 +1,38 @@
+<nav class="vertical-nav">
+  <ul class="vertical-navigation">
+
+    <li
+      class="vertical-tab"
+      [class.vertical-tab-active]="panelState.projects"
+      (click)="togglePanel('projects', panelState)"
+    >
+      <small>
+        <i class="fas fa-folder"></i>
+        1: Project
+      </small>
+    </li>
+
+    <li
+      class="vertical-tab"
+      [class.vertical-tab-active]="panelState.blog"
+      (click)="togglePanel('blog', panelState)"
+    >
+      <small>
+        <i class="fas fa-newspaper"></i>
+        2: Blog
+      </small>
+    </li>
+
+    <li
+      class="vertical-tab"
+      [class.vertical-tab-active]="panelState.favorites"
+      (click)="togglePanel('favorites', panelState)"
+    >
+      <small>
+        <i class="fas fa-star"></i>
+        3: Favorites
+      </small>
+    </li>
+
+  </ul>
+</nav>

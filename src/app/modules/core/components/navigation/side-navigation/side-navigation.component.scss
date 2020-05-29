@@ -17,26 +17,6 @@
   height: 100%;
 }
 
-.vertical-nav {
-  width: 1.4rem;
-  height: 100%;
-  position: relative;
-
-  li {
-    width: max-content;
-  }
-}
-
-.vertical-navigation {
-  height: 100%;
-  padding: 0;
-  margin: .5rem 0 0 0;
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
 .horizontal-nav {
   height: 1.7rem;
   width: 100%;
@@ -45,21 +25,8 @@
 }
 
 .side-nav-content {
-  width: calc(100% - 1.4rem);
+  width: 100%;
   height: 100%;
-}
-
-.vertical-tab {
-  transform: rotate(270deg);
-  transform-origin: 0 top;
-  margin-top: 5rem;
-  background-color: #212529;
-  padding: 0 .75rem;
-  cursor: pointer;
-}
-
-.vertical-tab-active {
-  background-color: $accent;
 }
 
 .nav-projects, .nav-blog, .nav-favorites {
@@ -72,17 +39,4 @@
 
 .nav-projects {
   border-top: none
-}
-
-.close-panel {
-  border-radius: 50%;
-  width: 1.3rem;
-  height: 1.3rem;
-  border: none;
-  background: transparent;
-  transition: background-color .1s ease;
-  &:hover {
-    cursor: pointer;
-    background-color: rgba($danger, 0.6);
-  }
 }

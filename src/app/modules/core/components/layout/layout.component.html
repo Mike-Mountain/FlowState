@@ -1,21 +1,38 @@
 <section class="app-navigation">
   <app-primary-navigation></app-primary-navigation>
 </section>
-<section class="wrapper">
-  <aside class="side-navigation" [ngClass]="panelIsOpen ? 'panel-open' : 'panel-closed'">
-    <app-side-navigation
-      [panelIsOpen]="panelIsOpen"
-      (toggleEvent)="panelIsOpen = $event"
-    ></app-side-navigation>
-  </aside>
-  <main class="content" [ngClass]="panelIsOpen ? 'content-small' : 'content-large'">
-    <section class="content-navigation">
-      <app-content-navigation></app-content-navigation>
-    </section>
-    <router-outlet></router-outlet>
-  </main>
-</section>
-<footer class="app-footer">
-  <app-footer></app-footer>
-  <app-footer-content></app-footer-content>
-</footer>
+<ng-container *ngIf="layoutService.getLayoutState() | async as layoutState">
+  <section class="wrapper">
+    <aside
+      *ngIf="layoutService.getSidePanelState() | async as panelState"
+      class="side-navigation"
+      [class]="'w-' + layoutState.sidePanelWidth"
+    >
+      <app-vertical-navigation
+        [panelState]="panelState"
+      ></app-vertical-navigation>
+      <app-side-navigation
+        [panelState]="panelState"
+        class="w-100"
+        [class]="'h-' + layoutState.sidePanelHeight"
+      ></app-side-navigation>
+    </aside>
+    <main
+      class="content"
+      [class]="['w-' + layoutState.contentPanelWidth, 'h-' + layoutState.contentPanelHeight]"
+    >
+      <section class="content-navigation">
+        <app-content-navigation></app-content-navigation>
+      </section>
+      <router-outlet></router-outlet>
+    </main>
+  </section>
+  <footer class="app-footer">
+    <app-footer
+      [layoutState]="layoutState"
+    ></app-footer>
+    <app-vitae-container
+      [layoutState]="layoutState"
+    ></app-vitae-container>
+  </footer>
+</ng-container>

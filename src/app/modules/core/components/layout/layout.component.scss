@@ -1,3 +1,5 @@
+@import "../../../../../scss/variables/theme-colours";
+
 .app-navigation {
   height: 5%;
 }
@@ -8,7 +10,7 @@
   overflow: hidden;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .side-navigation {
@@ -19,10 +21,7 @@
   border-top: 3px solid rgba(255, 255, 255, 0.4);
   position: relative;
   z-index: 20;
-}
-
-.panel-open {
-  width: 20%;
+  display: flex;
 }
 
 .panel-closed {
@@ -34,15 +33,6 @@
   max-height: 100%;
   overflow-y: auto;
 }
-
-.content-large {
-  width: 99%;
-}
-
-.content-small {
-  width: 80%;
-}
-
 
 .content-navigation {
   height: 3rem;

@@ -1542,12 +1542,20 @@ a.bg-dark:focus, a.bg-dark:hover, button.bg-dark:focus, button.bg-dark:hover {
   width: 95% !important
 }
 
+.w-99 {
+  width: 99% !important
+}
+
 .w-100 {
   width: 100% !important
 }
 
 .w-auto {
   width: auto !important
+}
+
+.h-0 {
+  height: 0 !important;
 }
 
 .h-5 {
@@ -3011,6 +3019,10 @@ a.text-dark:focus, a.text-dark:hover {
 
 .z-index-high {
   z-index: 20;
+}
+
+.z-index-low {
+  z-index: -5;
 }
 
 .left-0 {

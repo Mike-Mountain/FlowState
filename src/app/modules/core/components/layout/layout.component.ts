@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {LayoutService} from '../../services/layout.service';
 
 @Component({
   selector: 'app-layout',
@@ -7,9 +8,7 @@ import {Component, OnInit} from '@angular/core';
 })
 export class LayoutComponent implements OnInit {
 
-  public panelIsOpen = true;
-
-  constructor() {
+  constructor(public layoutService: LayoutService) {
   }
 
   ngOnInit(): void {
