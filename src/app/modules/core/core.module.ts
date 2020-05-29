@@ -8,6 +8,7 @@ import {ContentNavigationComponent} from './components/navigation/content-naviga
 import {FooterComponent} from './components/footer-area/footer/footer.component';
 import {VitaeModule} from '../vitae/vitae.module';
 import { VerticalNavigationComponent } from './components/navigation/vertical-navigation/vertical-navigation.component';
+import { ProjectListComponent } from './components/lists/project-list/project-list.component';
 
 
 @NgModule({
@@ -18,6 +19,7 @@ import { VerticalNavigationComponent } from './components/navigation/vertical-na
     ContentNavigationComponent,
     FooterComponent,
     VerticalNavigationComponent,
+    ProjectListComponent,
   ],
   imports: [
     CommonModule,

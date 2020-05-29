@@ -126,5 +126,8 @@
       }
     }
   },
-  "defaultProject": "FlowState"
+  "defaultProject": "FlowState",
+  "cli": {
+    "defaultCollection": "@datorama/akita"
+  }
 }
