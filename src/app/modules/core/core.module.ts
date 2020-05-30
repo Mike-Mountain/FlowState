@@ -7,8 +7,9 @@ import {SideNavigationComponent} from './components/navigation/side-navigation/s
 import {ContentNavigationComponent} from './components/navigation/content-navigation/content-navigation.component';
 import {FooterComponent} from './components/footer-area/footer/footer.component';
 import {VitaeModule} from '../vitae/vitae.module';
-import { VerticalNavigationComponent } from './components/navigation/vertical-navigation/vertical-navigation.component';
-import { ProjectListComponent } from './components/lists/project-list/project-list.component';
+import {VerticalNavigationComponent} from './components/navigation/vertical-navigation/vertical-navigation.component';
+import {ProjectListComponent} from './components/lists/project-list/project-list.component';
+import {LandingComponent} from './components/landing/landing.component';
 
 
 @NgModule({
@@ -20,6 +21,7 @@ import { ProjectListComponent } from './components/lists/project-list/project-li
     FooterComponent,
     VerticalNavigationComponent,
     ProjectListComponent,
+    LandingComponent
   ],
   imports: [
     CommonModule,
@@ -27,7 +29,8 @@ import { ProjectListComponent } from './components/lists/project-list/project-li
     VitaeModule
   ],
   exports: [
-    LayoutComponent
+    LayoutComponent,
+    LandingComponent
   ],
 })
 export class CoreModule {

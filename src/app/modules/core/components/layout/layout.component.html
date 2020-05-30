@@ -19,7 +19,6 @@
       ></app-side-navigation>
     </aside>
     <main
-      class="content"
       [class]="['w-' + layoutState.contentPanelWidth, 'h-' + layoutState.contentPanelHeight]"
     >
       <section
@@ -31,7 +30,9 @@
           [layoutState]="layoutState"
         ></app-content-navigation>
       </section>
-      <router-outlet></router-outlet>
+      <div class="content">
+        <router-outlet></router-outlet>
+      </div>
     </main>
   </section>
   <footer class="app-footer">

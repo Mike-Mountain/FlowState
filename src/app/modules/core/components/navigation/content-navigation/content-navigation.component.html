@@ -1,7 +1,13 @@
 <div class="content-nav">
   <ng-container *ngIf="tabsService.getTabsList() | async as tabs">
     <ng-container *ngFor="let tab of tabs; let i = index">
-      <button class="content-tab content-tab-active" [routerLink]="tab.route">
+      <button
+        class="content-tab"
+        routerLinkActive="content-tab-active"
+        [class.content-tab-active]="tab?.label === tabsService?.activeTab?.label"
+        [routerLink]="tab.route"
+        (click)="tabsService.activeTab = tab"
+      >
         <i class="fab fa-2x fa-angular mr-2"></i>
         {{tab.label}}
         <i

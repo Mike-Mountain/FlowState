@@ -7,7 +7,16 @@ import {Tab} from '../../models/tab.interface';
 })
 export class TabsService {
 
+  get activeTab(): Tab {
+    return this.activeTabSrc;
+  }
+
+  set activeTab(value: Tab) {
+    this.activeTabSrc = value;
+  }
+
   private tabsList = new BehaviorSubject<Tab[]>([]);
+  private activeTabSrc: Tab;
 
   constructor() {
   }
@@ -18,10 +27,11 @@ export class TabsService {
     this.tabsList.next(tabs);
   }
 
-  removeTab(tab: Tab) {
+  removeTab(tab: Tab): Tab[] {
     let tabs = this.tabsList.getValue();
     tabs = tabs.filter(item => item !== tab);
     this.tabsList.next(tabs);
+    return tabs;
   }
 
   getTabsList(): Observable<Tab[]> {

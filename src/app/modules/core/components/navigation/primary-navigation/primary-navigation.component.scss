@@ -27,8 +27,8 @@
 }
 
 .dropdown-target {
-  min-height: 0;
   position: absolute;
+  min-height: 4rem;
   top: 1.5rem;
   left: 0;
   right: 0;
@@ -36,16 +36,14 @@
   border: 1px solid black;
   width: 90%;
   z-index: 99;
-  transition: min-height .1s ease;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  opacity: 0;
+  display: none;
 }
 
 .dropdown-target.show-dropdown {
-  opacity: 1;
-  min-height: 4rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
 }
 
 .dropdown-link {

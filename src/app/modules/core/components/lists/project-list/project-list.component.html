@@ -1,6 +1,10 @@
 <nav class="projects-list">
   <ng-container *ngFor="let project of projects">
-    <button class="side-nav-link" (click)="openProjectDetails(project)">
+    <button
+      class="side-nav-link"
+      [class.side-nav-link-active]="project.title === tabsService?.activeTab?.label"
+      (click)="openProjectDetails(project)"
+    >
       {{project.title}}
     </button>
   </ng-container>

@@ -21,16 +21,19 @@ export class ContentNavigationComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  public closeTab(tab, tabs, index) {
-    const state: LayoutState = {
-      ...this.layoutState,
-      contentNavigationHeight: 0
-    };
+  public closeTab(tab, tabs, index): void {
+    const state: LayoutState = this.layoutState;
+    if (JSON.stringify(tab) === JSON.stringify(this.tabsService.activeTab)) {
+      if (tabs.length > 1) {
+        this.router.navigateByUrl(tabs[index - 1].route).then(() => state.contentNavigationHeight = 100);
+        this.tabsService.activeTab = tabs[index - 1];
+      } else {
+        this.router.navigateByUrl('/home/landing').then(() => state.contentNavigationHeight = 0);
+        this.tabsService.activeTab = undefined;
+      }
+    }
     this.layoutService.updateLayoutState(state);
     this.tabsService.removeTab(tab);
-    index > 0 ?
-      this.router.navigateByUrl(tabs[index].route) :
-      this.router.navigateByUrl('/home/landing');
   }
 
 }
