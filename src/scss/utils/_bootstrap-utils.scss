@@ -3040,3 +3040,12 @@ a.text-dark:focus, a.text-dark:hover {
 .fa-xsm {
   font-size: .675em;
 }
+
+.disabled {
+  cursor: default !important;
+  pointer-events: none !important;
+  opacity: .4;
+  &:hover {
+    background: none !important;
+  }
+}

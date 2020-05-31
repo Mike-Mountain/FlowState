@@ -1,0 +1,42 @@
+<section class="login">
+  <app-spinner [isLoading]="loadingService.getIsLoading()" class="w-100 flex-center">
+    <div class="card w-25">
+      <h3 class="card-title text-center">Login</h3>
+      <div class="card-body">
+        <form class="login-form" [formGroup]="loginForm" (ngSubmit)="login()">
+          <div class="input-group">
+            <label for="identifier" class="input-label">
+              Email/Username
+            </label>
+            <input
+              class="input"
+              type="text"
+              id="identifier"
+              name="identifier"
+              required
+              formControlName="identifier"
+            >
+          </div>
+
+          <div class="input-group">
+            <label for="password" class="input-label">
+              Password
+            </label>
+            <input
+              class="input"
+              type="password"
+              id="password"
+              name="password"
+              required
+              formControlName="password"
+            >
+          </div>
+
+          <div class="w-100 flex-center">
+            <button class="button primary-button w-75" type="submit">Login</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </app-spinner>
+</section>

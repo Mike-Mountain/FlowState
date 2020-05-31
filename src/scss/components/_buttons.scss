@@ -1,0 +1,26 @@
+@import "../variables/theme-colours";
+
+.button {
+  min-height: 2rem;
+  min-width: 4rem;
+  background: transparent;
+  border: 1px solid;
+  cursor: pointer;
+  transition: .1s linear;
+  font-size: .8rem;
+}
+
+.button-sm {
+  min-height: 1.5rem;
+  min-width: 2rem;
+  font-size: .6rem;
+}
+
+.primary-button {
+  border-color: $primary;
+  color: $primary;
+  &:hover {
+    color: $light;
+    background: $primary;
+  }
+}

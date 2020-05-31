@@ -9,6 +9,7 @@
   height: .6rem;
   transition: background-color .2s ease;
   cursor: pointer;
+  border: none;
   &:hover {
     background: rgba($primary, 0.6);
   }
@@ -56,4 +57,12 @@
     cursor: pointer;
     background: rgba($accent, 0.6);
   }
+}
+
+.search-box {
+  display: none;
+}
+
+.search-box.show-search, button.show-search {
+  display: block !important;
 }

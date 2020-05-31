@@ -26,6 +26,11 @@
       <ng-container *ngSwitchCase="'contact'">
         <app-contact></app-contact>
       </ng-container>
+      <ng-container *ngSwitchCase="'login'">
+        <app-login
+          (closePanel)="toggleVitaeContainer()"
+        ></app-login>
+      </ng-container>
     </ng-container>
   </div>
 </section>

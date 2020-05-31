@@ -28,7 +28,7 @@ export class ContentNavigationComponent implements OnInit {
         this.router.navigateByUrl(tabs[index - 1].route).then(() => state.contentNavigationHeight = 100);
         this.tabsService.activeTab = tabs[index - 1];
       } else {
-        this.router.navigateByUrl('/home/landing').then(() => state.contentNavigationHeight = 0);
+        this.router.navigateByUrl('/home').then(() => state.contentNavigationHeight = 0);
         this.tabsService.activeTab = undefined;
       }
     }

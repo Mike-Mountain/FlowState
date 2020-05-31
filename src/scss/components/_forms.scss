@@ -1,0 +1,18 @@
+@import "../variables/theme-colours";
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  margin: .75rem 0;
+}
+
+.input {
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid $light;
+  padding: .25rem;
+  color: $light;
+  &:focus {
+    border-bottom-color: $primary;
+  }
+}

@@ -60,12 +60,21 @@
     </button>
 
     <button
+      *authenticatedWithRole="'Unauthenticated'"
       class="content-tab"
       (click)="toggleVitaePanel('login')"
       [class.content-tab-active]="layoutService.activeVitaeTab === 'login'"
     >
       <i class="fas fa-user fa-sm mr-1"></i>
       Login
+    </button>
+    <button
+      *authenticatedWithRole="'Any'"
+      class="content-tab"
+      (click)="logout()"
+    >
+      <i class="fas fa-user fa-sm mr-1"></i>
+      Logout
     </button>
   </div>
 </div>

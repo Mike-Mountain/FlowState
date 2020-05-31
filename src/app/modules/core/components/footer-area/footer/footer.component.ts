@@ -2,6 +2,7 @@ import {Component, ElementRef, Input, NgZone, OnInit, Renderer2, ViewChild} from
 import {DatePipe} from '@angular/common';
 import {LayoutService} from '../../../services/layout-service/layout.service';
 import {LayoutState} from '../../../models/layout-state.inteface';
+import {SessionService} from '../../../stores/session/session.service';
 
 @Component({
   selector: 'app-footer',
@@ -18,7 +19,8 @@ export class FooterComponent implements OnInit {
 
   constructor(private zone: NgZone,
               private renderer: Renderer2,
-              public layoutService: LayoutService) {
+              public layoutService: LayoutService,
+              private sessionService: SessionService) {
     zone.runOutsideAngular(() => {
       setInterval(() => {
         renderer.setProperty(this.dateControl.nativeElement, 'textContent', this.datePipe.transform(new Date(), 'HH:mm:ss'));
@@ -51,5 +53,9 @@ export class FooterComponent implements OnInit {
       this.layoutService.updateLayoutState(state);
       this.layoutService.activeVitaeTab = '';
     }
+  }
+
+  logout() {
+    this.sessionService.logout();
   }
 }

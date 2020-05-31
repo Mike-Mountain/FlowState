@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {ProjectsQuery} from '../../../../projects/store/projects.query';
+import {Project} from '../../../../projects/store/project.model';
 
 @Component({
   selector: 'app-primary-navigation',
@@ -9,7 +10,9 @@ import {ProjectsQuery} from '../../../../projects/store/projects.query';
 export class PrimaryNavigationComponent implements OnInit {
 
   dropdownIsActive: boolean;
-  selectedProject: string;
+  selectedProject: Project;
+  searchText: string;
+  isSearching: boolean;
 
   constructor(public projectsQuery: ProjectsQuery) {
   }
@@ -17,4 +20,6 @@ export class PrimaryNavigationComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  search(searchText: string) {
+  }
 }
