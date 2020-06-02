@@ -1,6 +1,7 @@
 import {Directive, Input, OnDestroy, OnInit, TemplateRef, ViewContainerRef} from '@angular/core';
 import {Subscription} from 'rxjs';
 import {SessionQuery} from '../../../core/stores/session/session.query';
+import {User} from '../../../core/stores/session/session.model';
 
 @Directive({
   // tslint:disable-next-line:directive-selector
@@ -20,9 +21,9 @@ export class AuthenticatedWithRoleDirective implements OnInit, OnDestroy {
     this.viewContainer.clear();
     this.userSubscription = this.sessionQuery.getUser().subscribe(user => {
       switch (true) {
-        // case (user && this.hasRole(user)):
-        //   this.createView();
-        //   break;
+        case (user && this.hasRole(user)):
+          this.createView();
+          break;
         case (user && this.authenticatedWithRole.includes('Any')):
           this.createView();
           break;
@@ -46,13 +47,7 @@ export class AuthenticatedWithRoleDirective implements OnInit, OnDestroy {
     }
   }
 
-  // private hasRole(user: User): boolean {
-  //   let matched = false;
-  //   user.roles.forEach(role => {
-  //     if (this.authenticatedWithRole.includes(role)) {
-  //       matched = true;
-  //     }
-  //   });
-  //   return matched;
-  // }
+  private hasRole(user: User): boolean {
+    return user.role.name === this.authenticatedWithRole;
+  }
 }

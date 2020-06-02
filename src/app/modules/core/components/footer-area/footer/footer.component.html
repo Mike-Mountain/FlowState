@@ -60,6 +60,15 @@
     </button>
 
     <button
+      *authenticatedWithRole="'SysAdmin'"
+      class="content-tab"
+      (click)="toggleVitaePanel('admin')"
+    >
+      <i class="fas fa-shield-alt fa-sm mr-1"></i>
+      Admin
+    </button>
+
+    <button
       *authenticatedWithRole="'Unauthenticated'"
       class="content-tab"
       (click)="toggleVitaePanel('login')"

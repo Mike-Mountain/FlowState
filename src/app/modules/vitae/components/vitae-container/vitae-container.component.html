@@ -9,7 +9,7 @@
       <i class="fas fa-sm fa-minus"></i>
     </button>
   </div>
-  <div class="vitae-content">
+  <div class="vitae-content h-100">
     <ng-container [ngSwitch]="layoutService.activeVitaeTab">
       <ng-container *ngSwitchCase="'skills'">
         <app-skills></app-skills>
@@ -25,6 +25,9 @@
       </ng-container>
       <ng-container *ngSwitchCase="'contact'">
         <app-contact></app-contact>
+      </ng-container>
+      <ng-container *ngSwitchCase="'admin'">
+        <ng-template #container></ng-template>
       </ng-container>
       <ng-container *ngSwitchCase="'login'">
         <app-login

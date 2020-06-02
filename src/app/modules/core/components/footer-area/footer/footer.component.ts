@@ -42,6 +42,7 @@ export class FooterComponent implements OnInit {
         sidePanelHeight: 60
       };
       this.layoutService.updateLayoutState(state);
+      this.layoutService.updateActiveTab(section);
       this.layoutService.activeVitaeTab = section;
     } else {
       state = {
@@ -51,6 +52,7 @@ export class FooterComponent implements OnInit {
         sidePanelHeight: 100
       };
       this.layoutService.updateLayoutState(state);
+      this.layoutService.updateActiveTab('');
       this.layoutService.activeVitaeTab = '';
     }
   }

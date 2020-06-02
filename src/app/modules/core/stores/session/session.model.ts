@@ -14,6 +14,14 @@ export interface User {
   id: string;
   email: string;
   username: string;
+  role: Role;
+}
+
+export interface Role {
+  id: string;
+  description: string;
+  name: string;
+  type: string;
 }
 
 export function createInitialState(): SessionState {
@@ -34,8 +42,18 @@ export function createUser(params?: Partial<User>): User {
   return {
     id: params?.id,
     email: params?.email,
-    username: params?.username
+    username: params?.username,
+    role: createRole(params?.role)
   } as User;
+}
+
+export function createRole(params?: Partial<Role>) {
+  return {
+    id: params?.id,
+    description: params?.description,
+    name: params?.name,
+    type: params?.type
+  } as Role;
 }
 
 export function createLoginForm(formBuilder: FormBuilder): FormGroup {

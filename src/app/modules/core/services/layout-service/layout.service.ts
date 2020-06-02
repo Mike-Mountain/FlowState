@@ -1,6 +1,7 @@
 import {Injectable} from '@angular/core';
 import {BehaviorSubject, Observable} from 'rxjs';
 import {LayoutState, PanelState} from '../../models/layout-state.inteface';
+import {Tab} from '../../models/tab.interface';
 
 @Injectable({
   providedIn: 'root'
@@ -32,6 +33,7 @@ export class LayoutService {
   private layoutState = new BehaviorSubject<LayoutState>(this.initialState);
   private sidePanelState = new BehaviorSubject<PanelState>(this.initialSideState);
   private numberSelected = new BehaviorSubject<number>(1);
+  private activeTab = new BehaviorSubject<string>('');
   private activeVitaeTabSrc: string;
 
   constructor() {
@@ -68,5 +70,13 @@ export class LayoutService {
 
   public getNumberSelected(): Observable<number> {
     return this.numberSelected.asObservable();
+  }
+
+  public updateActiveTab(tabName: string) {
+    this.activeTab.next(tabName);
+  }
+
+  getActiveTab(): Observable<string> {
+    return this.activeTab.asObservable();
   }
 }

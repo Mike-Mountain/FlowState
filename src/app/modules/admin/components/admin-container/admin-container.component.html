@@ -1,0 +1,47 @@
+<section class="admin">
+  <aside class="admin-side-panel">
+    <button
+      class="side-nav-link"
+      [class.side-nav-link-active]="selectedTab === 'home'"
+      (click)="selectedTab = 'home'"
+    >
+      <i class="fas fa-home"></i>
+    </button>
+    <button
+      class="side-nav-link"
+      [class.side-nav-link-active]="selectedTab === 'projects'"
+      (click)="selectedTab = 'projects'"
+    >
+      <i class="fas fa-folder"></i>
+    </button>
+    <button
+      class="side-nav-link"
+      (click)="selectedTab = 'blog'"
+      [class.side-nav-link-active]="selectedTab === 'blog'"
+    >
+      <i class="fas fa-newspaper"></i>
+    </button>
+    <button
+      class="side-nav-link"
+      [class.side-nav-link-active]="selectedTab === 'favourites'"
+      (click)="selectedTab = 'favourites'">
+      <i class="fas fa-star"></i>
+    </button>
+  </aside>
+  <div class="admin-content">
+    <ng-container [ngSwitch]="selectedTab">
+      <ng-container *ngSwitchCase="'home'">
+        <app-admin-home></app-admin-home>
+      </ng-container>
+      <ng-container *ngSwitchCase="'projects'">
+        <app-admin-projects></app-admin-projects>
+      </ng-container>
+      <ng-container *ngSwitchCase="'blog'">
+        <app-admin-blog></app-admin-blog>
+      </ng-container>
+      <ng-container *ngSwitchCase="'favourites'">
+        Favourites Works!
+      </ng-container>
+    </ng-container>
+  </div>
+</section>
