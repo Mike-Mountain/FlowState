@@ -1,0 +1,22 @@
+<ng-container *ngIf="colorPickerService.getColorPallet() | async as color">
+  <div class="color-picker-container">
+    <button class="button primary-button color-picker-button" (click)="pickerIsActive = !pickerIsActive">{{color}}</button>
+    <figure class="color-picker" [class.show]="pickerIsActive">
+      <div class="d-flex">
+        <div class="w-75 flex-center">
+          <app-color-palette
+            (colorChanged)="colorChanged($event)"
+          ></app-color-palette>
+        </div>
+        <div class="w-25 flex-center">
+          <app-color-slider
+            (colorChanged)="colorChanged($event)"
+          ></app-color-slider>
+        </div>
+      </div>
+      <div class="color-input" [ngStyle]="{'background-color': color}">
+        <p class="label text-shadow" appTextColor [bgColor]="color">{{color}}</p>
+      </div>
+    </figure>
+  </div>
+</ng-container>

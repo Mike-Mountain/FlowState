@@ -1,0 +1,33 @@
+.color-picker-container {
+  position: relative;
+  margin: 1.5rem;
+}
+
+.color-picker {
+  position: absolute;
+  left: 9.5rem;
+  top: 0;
+  height: 19rem;
+  width: 15rem;
+  box-shadow: var(--box-shadow);
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: space-between;
+  margin: 0;
+  display: none;
+}
+
+.color-picker.show {
+  display: flex;
+}
+
+.color-input {
+  box-shadow: var(--box-shadow);
+  padding: .75rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.color-picker-button {
+  width: 9rem;
+}

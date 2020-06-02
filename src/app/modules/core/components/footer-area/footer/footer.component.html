@@ -54,7 +54,10 @@
 
     <button class="content-tab" #date></button>
 
-    <button class="content-tab">
+    <button
+      class="content-tab"
+      (click)="toggleVitaePanel('theme')"
+    >
       <i class="fas fa-palette fa-sm mr-1"></i>
       Theme
     </button>

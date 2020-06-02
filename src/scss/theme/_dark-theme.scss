@@ -5,3 +5,11 @@ $page_bg: $dark;
 $card_bg: #2f343f;
 $card_title: $light;
 $box-shadow: 0 2px 4px rgba($dark, 0.1), 0 0 0 1px rgba($dark, 0.1);
+
+:root {
+  --text: var(--light);
+  --page-bg: var(--dark);
+  --card-bg: #2f343f;
+  --card-title: var(--light);
+  --box-shadow:  0 2px 4px rgba(0, 0, 0, 0.8), 0 0 3px 1px rgba(0, 0, 0, 0.8);
+}

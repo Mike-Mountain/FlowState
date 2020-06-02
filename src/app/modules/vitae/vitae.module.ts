@@ -7,6 +7,7 @@ import {ExperienceComponent} from './components/experience/experience.component'
 import {EducationComponent} from './components/education/education.component';
 import {ContactComponent} from './components/contact/contact.component';
 import {AuthenticationModule} from '../authentication/authentication.module';
+import {ThemeModule} from '../theme/theme.module';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import {AuthenticationModule} from '../authentication/authentication.module';
   ],
   imports: [
     CommonModule,
-    AuthenticationModule
+    AuthenticationModule,
+    ThemeModule
   ],
   exports: [
     VitaeContainerComponent

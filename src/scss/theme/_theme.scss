@@ -1,7 +1,7 @@
 @import "dark-theme";
 
 body, .vitae-container {
-  background-color: $page_bg;
+  background-color: var(--page-bg);
 }
 
 a,
@@ -18,21 +18,21 @@ small,
 button,
 i,
 .card-body {
-  color: $text;
+  color: var(--text);
 }
 
 .card {
-  background-color: $card_bg;
-  box-shadow: 0 2px 4px rgba($dark, 0.8), 0 0 3px 1px rgba(0, 0, 0, 0.8);
+  background-color: var(--card-bg);
+  box-shadow: var(--box-shadow);
 }
 
 .card-title {
-  color: $card_title;
+  color: var(--card-title);
 }
 
 hr {
-  border-color: $primary;
-  color: $primary
+  border-color: var(--primary);
+  color: var(--primary);
 }
 
 .nav,
@@ -41,6 +41,6 @@ hr {
 .vertical-nav,
 .horizontal-nav,
 .vitae-bar,
-.dropdown-target{
-  background-color: $card_bg;
+.dropdown-target {
+  background-color: var(--card-bg);
 }
