@@ -36,7 +36,7 @@
     </button>
     <div class="dropdown-target" [class.show-dropdown]="dropdownIsActive">
       <ng-container *ngFor="let project of projectsQuery.selectAll() | async">
-        <button class="dropdown-link" (click)="selectedProject = project; dropdownIsActive = false">
+        <button class="dropdown-link" (click)="selectProject(project)">
           {{project.title}}
         </button>
       </ng-container>
@@ -44,7 +44,11 @@
   </div>
 
   <div class="flex-start list-style-none pl-0 pt-1 ml-1">
-    <a class="primary-nav-link flex-center mr-2" [class.disabled]="!selectedProject">
+    <a
+      class="primary-nav-link flex-center mr-2"
+      [class.disabled]="!selectedProject"
+      (click)="runProject()"
+    >
       <i class="fas fa-play fa-sm"></i>
     </a>
 

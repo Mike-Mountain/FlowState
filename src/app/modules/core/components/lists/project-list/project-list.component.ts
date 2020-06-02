@@ -41,7 +41,7 @@ export class ProjectListComponent implements OnInit {
     this.tabsSubscription = this.tabsService.getTabsList().subscribe(tabs => this.tabs = tabs);
   }
 
-  openProjectDetails(project: Project) {
+  openProjectDetails(project: Project): void {
     const tab: Tab = {
       label: project.title,
       route: `projects/details/${project.id}`
