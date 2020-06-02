@@ -46,15 +46,19 @@ export class VitaeContainerComponent implements OnInit, OnDestroy {
 
   private loadFeature() {
     // see https://medium.com/@ckyidr9/lazy-load-feature-modules-without-routing-in-angular-9-ivy-220851cc7751
-    import('../../../admin/admin.module').then(({AdminModule}) => {
-      this.compiler.compileModuleAsync(AdminModule).then(moduleFactory => {
-        const moduleRef = moduleFactory.create(this.injector);
-        const componentFactory = moduleRef.instance.resolveComponent();
-        const {instance} = this.container.createComponent(componentFactory, null, moduleRef.injector);
+    setTimeout(() => {
+      if (this.container) {
+        import('../../../admin/admin.module').then(({AdminModule}) => {
+          this.compiler.compileModuleAsync(AdminModule).then(moduleFactory => {
+            const moduleRef = moduleFactory.create(this.injector);
+            const componentFactory = moduleRef.instance.resolveComponent();
+            const {instance} = this.container.createComponent(componentFactory, null, moduleRef.injector);
 
-        instance.ngOnInit();
-      });
-    });
+            instance.ngOnChanges({});
+          });
+        });
+      }
+    }, 100);
   }
 
 }

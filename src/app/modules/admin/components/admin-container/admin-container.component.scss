@@ -1,7 +1,7 @@
 .admin {
   display: flex;
   position: relative;
-  height: 92%;
+  height: 100%;
 }
 
 .admin-side-panel {
@@ -23,4 +23,10 @@
 
 .content-tab {
   height: initial;
+}
+
+.side-nav-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
