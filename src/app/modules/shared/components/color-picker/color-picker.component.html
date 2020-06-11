@@ -1,22 +1,36 @@
 <ng-container *ngIf="colorPickerService.getColorPallet() | async as color">
   <div class="color-picker-container">
-    <button class="button primary-button color-picker-button" (click)="pickerIsActive = !pickerIsActive">{{color}}</button>
-    <figure class="color-picker" [class.show]="pickerIsActive">
-      <div class="d-flex">
-        <div class="w-75 flex-center">
-          <app-color-palette
-            (colorChanged)="colorChanged($event)"
-          ></app-color-palette>
+    <button
+      class="button color-picker-button"
+      appTextColor
+      [bgColor]="color.color"
+      (click)="openDialog(colorPicker)"
+    >
+      {{label}}
+    </button>
+    <ng-template #colorPicker>
+      <figure class="color-picker">
+        <p class="overlay-label">{{label}}</p>
+        <div class="d-flex">
+          <div class="w-75 flex-center">
+            <app-color-palette
+            ></app-color-palette>
+          </div>
+          <div class="w-25 flex-center">
+            <app-color-slider
+            ></app-color-slider>
+          </div>
         </div>
-        <div class="w-25 flex-center">
-          <app-color-slider
-            (colorChanged)="colorChanged($event)"
-          ></app-color-slider>
+        <div class="color-input" [ngStyle]="{'background-color': color.color}">
+          <p class="label text-shadow" appTextColor [bgColor]="color.color">{{color.color}}</p>
+          <!--        <button-->
+          <!--          class="button"-->
+          <!--          appTextColor-->
+          <!--          [bgColor]="color.color"-->
+          <!--          (click)="colorChanged(color)"-->
+          <!--        >Apply Color</button>-->
         </div>
-      </div>
-      <div class="color-input" [ngStyle]="{'background-color': color}">
-        <p class="label text-shadow" appTextColor [bgColor]="color">{{color}}</p>
-      </div>
-    </figure>
+      </figure>
+    </ng-template>
   </div>
 </ng-container>

@@ -7,7 +7,7 @@ import {SessionState, User} from './session.model';
 @Injectable({providedIn: 'root'})
 export class SessionQuery extends Query<SessionState> {
 
-  private isLoggedIn$ = this.select(state => state.jwt !== null);
+  private isLoggedIn$ = this.select(state => (state.jwt !== null && state.jwt !== undefined));
   private token$ = this.select(state => state.jwt);
   private user$ = this.select(state => state.user);
 

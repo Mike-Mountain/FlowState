@@ -34,7 +34,7 @@ export class ProjectListComponent implements OnInit {
       this.projects = this.projectsQuery.getAll();
     } else {
       this.projectsService.get<Project[]>().subscribe(projects => {
-        this.projects = projects.map(project => createProject(project));
+        this.projects = projects.map(project => createProject(project)) as Project[];
       });
     }
 

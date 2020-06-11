@@ -8,6 +8,10 @@
   cursor: pointer;
   transition: .1s linear;
   font-size: .8rem;
+  &:hover {
+    color: var(--light);
+    background: var(--dark);
+  }
 }
 
 .button-sm {
@@ -17,10 +21,19 @@
 }
 
 .primary-button {
-  border-color: $primary;
-  color: $primary;
+  border-color: var(--primary);
+  color: var(--primary);
   &:hover {
-    color: $light;
-    background: $primary;
+    color: var(--light);
+    background: var(--primary);
+  }
+}
+
+.button-dark {
+  border-color: var(--dark);
+  color: var(--dark);
+  &:hover {
+    color: var(--light);
+    background: var(--dark);
   }
 }

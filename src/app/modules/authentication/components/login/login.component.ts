@@ -28,7 +28,6 @@ export class LoginComponent implements OnInit {
   login(): void {
     this.loadingService.setIsLoading(true);
     this.sessionService.login(this.loginForm.value).subscribe((user) => {
-      console.log(user);
       this.loadingService.setIsLoading(false);
       this.closePanel.emit(true);
     });

@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import {LoadingService} from '../../services/loading-service/loading.service';
+import {Component, OnInit, TemplateRef, ViewChild} from '@angular/core';
+import {DialogService} from '../../../shared/services/dialog-service/dialog.service';
+import {PopoverRef} from '../../../shared/models/dialog-params.type';
 
 @Component({
   selector: 'app-landing',
@@ -8,9 +9,20 @@ import {LoadingService} from '../../services/loading-service/loading.service';
 })
 export class LandingComponent implements OnInit {
 
-  constructor(public loadingService: LoadingService) { }
+  @ViewChild('modalContent') private content: TemplateRef<HTMLElement>;
+  private dialogRef: PopoverRef;
+
+  constructor(private dialogService: DialogService) {
+  }
 
   ngOnInit(): void {
   }
 
+  open(content: TemplateRef<any>): void {
+    this.dialogRef = this.dialogService.open({content});
+  }
+
+  close(): void {
+    this.dialogRef.close();
+  }
 }

@@ -10,7 +10,7 @@ export class ColorSliderComponent implements OnInit, AfterViewInit {
 
   @ViewChild('canvas') canvas: ElementRef<HTMLCanvasElement>;
 
-  @Output() colorChanged = new EventEmitter<string>();
+  @Output() colorChanged = new EventEmitter<{ color: string, colorValues: any }>();
 
   private ctx: CanvasRenderingContext2D;
   private mouseDown: boolean;
@@ -88,6 +88,9 @@ export class ColorSliderComponent implements OnInit, AfterViewInit {
 
   private getColorPosition(x: number, y: number) {
     const data = this.ctx.getImageData(x, y, 1, 1).data;
-    return `rgba(${data[0]}, ${data[1]}, ${data[2]}, 1)`;
+    return {
+      color: 'rgba(' + data[0] + ',' + data[1] + ',' + data[2] + ',1)',
+      colorValues: data[0] + ',' + data[1] + ',' + data[2]
+    };
   }
 }

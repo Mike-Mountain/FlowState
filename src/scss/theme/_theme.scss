@@ -1,4 +1,4 @@
-@import "dark-theme";
+@import "default-theme";
 
 body, .vitae-container {
   background-color: var(--page-bg);
@@ -17,6 +17,7 @@ span,
 small,
 button,
 i,
+label,
 .card-body {
   color: var(--text);
 }

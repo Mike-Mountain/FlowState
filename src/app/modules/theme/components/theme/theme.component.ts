@@ -22,8 +22,14 @@ export class ThemeComponent implements OnInit {
     this.theme = createTheme({});
   }
 
-  updateTheme(color: string) {
-    this.dom.documentElement.style.setProperty('--page-bg', color);
+  updateTheme(color: { color, colorValues }, variableName: string, propertyName: string) {
+    this.theme[propertyName] = color.color;
+    this.dom.documentElement.style.setProperty(variableName, color.color);
+    this.dom.documentElement.style.setProperty(`${variableName}Values`, color.colorValues);
+  }
+
+  applyTheme(color: string, propertyName: string) {
+    this.dom.documentElement.style.setProperty(propertyName, color);
   }
 
   saveTheme() {

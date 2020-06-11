@@ -17,7 +17,7 @@
   transition: background-color .1s ease;
   &:hover {
     cursor: pointer;
-    background-color: rgba($danger, 0.6);
+    background-color: rgba(var(--dangerValues), 0.6);
   }
 }
 
@@ -37,13 +37,13 @@
   transition: background-color .2s ease;
   border-bottom: 3px solid transparent;
   &:hover {
-    background-color: rgba($primary, 0.6);
+    background-color: rgba(var(--primaryValues), 0.6);
   }
 }
 
 .content-tab-active {
-  background-color: rgba($primary, 0.6);
-  border-bottom-color: $info;
+  background-color: rgba(var(--primaryValues), 0.6);
+  border-bottom-color: var(--info);
 }
 
 .side-nav-link {
@@ -57,11 +57,11 @@
   border-left: 3px solid transparent;
   text-align: left;
   &:hover {
-    background-color: rgba($primary, 0.6);
+    background-color: rgba(var(--primaryValues), 0.6);
   }
 }
 
 .side-nav-link-active {
-  background-color: rgba($primary, 0.6);
-  border-left-color: $info;
+  background-color: rgba(var(--primaryValues), 0.6);
+  border-left-color: var(--info);
 }

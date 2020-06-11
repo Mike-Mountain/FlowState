@@ -2,25 +2,25 @@ import {BehaviorSubject, Observable} from 'rxjs';
 
 export class ColorPickerService {
 
-  private colorPallet = new BehaviorSubject<string>('rgba(255, 255, 255, 2)');
-  private colorSlider = new BehaviorSubject<string>('rgba(255, 255, 255, 2)');
+  private colorPallet = new BehaviorSubject<{ color, colorValues }>({color: 'rgba(255, 255, 255, 1}', colorValues: '255, 255, 255'});
+  private colorSlider = new BehaviorSubject<{ color, colorValues }>({color: 'rgba(255, 255, 255, 1}', colorValues: '255, 255, 255'});
 
   constructor() {
   }
 
-  setColorPallet(hue: string): void {
+  setColorPallet(hue: { color, colorValues }): void {
     this.colorPallet.next(hue);
   }
 
-  getColorPallet(): Observable<string> {
+  getColorPallet(): Observable<{ color, colorValues }> {
     return this.colorPallet.asObservable();
   }
 
-  setColorSlider(color: string): void {
+  setColorSlider(color: { color, colorValues }): void {
     this.colorSlider.next(color);
   }
 
-  getColorSlider(): Observable<string> {
+  getColorSlider(): Observable<{ color, colorValues }> {
     return this.colorSlider.asObservable();
   }
 }

@@ -1,24 +1,21 @@
 .color-picker-container {
-  position: relative;
   margin: 1.5rem;
 }
 
 .color-picker {
-  position: absolute;
-  left: 9.5rem;
-  top: 0;
+  margin: auto;
   height: 19rem;
   width: 15rem;
   box-shadow: var(--box-shadow);
   flex-direction: column;
   justify-content: space-between;
   align-content: space-between;
-  margin: 0;
-  display: none;
+  display: flex;
+  background-color: var(--dark);
 }
 
-.color-picker.show {
-  display: flex;
+.overlay-label {
+  margin: .25rem auto auto auto;
 }
 
 .color-input {

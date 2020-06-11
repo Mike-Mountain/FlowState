@@ -6,6 +6,9 @@ import {ColorPickerComponent} from './components/color-picker/color-picker.compo
 import {ColorSliderComponent} from './components/color-picker/color-slider/color-slider.component';
 import {ColorPaletteComponent} from './components/color-picker/color-palette/color-palette.component';
 import {TextColorDirective} from './directives/text-color/text-color.directive';
+import {FileUploadComponent} from './components/file-upload/file-upload.component';
+import {DialogComponent} from './components/dialog/dialog.component';
+import {OverlayModule} from '@angular/cdk/overlay';
 
 
 @NgModule({
@@ -16,14 +19,18 @@ import {TextColorDirective} from './directives/text-color/text-color.directive';
     ColorSliderComponent,
     ColorPaletteComponent,
     TextColorDirective,
+    FileUploadComponent,
+    DialogComponent
   ],
   exports: [
     SpinnerComponent,
     AuthenticatedWithRoleDirective,
-    ColorPickerComponent
+    ColorPickerComponent,
+    FileUploadComponent,
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    OverlayModule
   ]
 })
 export class SharedModule {

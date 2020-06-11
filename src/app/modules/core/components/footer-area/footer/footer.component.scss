@@ -16,6 +16,6 @@
   width: 6.5rem;
   cursor: pointer;
   &:hover {
-    background-color: rgba($primary, 0.6);
+    background-color: rgba(var(--primaryValues), 0.6);
   }
 }

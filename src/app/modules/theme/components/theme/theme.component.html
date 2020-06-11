@@ -1,5 +1,51 @@
-<div class="m-4">
-  <app-color-picker
-    (colorValue)="updateTheme($event)"
-  ></app-color-picker>
-</div>
+<section class="theme">
+  <div class="flex-around">
+    <app-color-picker
+      [label]="'Page Background'"
+      (colorValue)="updateTheme($event, '--page-bg', 'pageBg')"
+    ></app-color-picker>
+
+
+    <app-color-picker
+      [label]="'Card Background'"
+      (colorValue)="updateTheme($event, '--card-bg', 'cardBg')"
+    ></app-color-picker>
+
+
+    <app-color-picker
+      [label]="'Text Color'"
+      (colorValue)="updateTheme($event, '--text', 'textColor')"
+    ></app-color-picker>
+  </div>
+  <div class="flex-around">
+    <app-color-picker
+      [label]="'Primary'"
+      (colorValue)="updateTheme($event, '--primary', 'primary')"
+    ></app-color-picker>
+
+    <app-color-picker
+      [label]="'Accent'"
+      (colorValue)="updateTheme($event, '--accent', 'accent')"
+    ></app-color-picker>
+
+    <app-color-picker
+      [label]="'Info'"
+      (colorValue)="updateTheme($event, '--info', 'info')"
+    ></app-color-picker>
+
+    <app-color-picker
+      [label]="'Success'"
+      (colorValue)="updateTheme($event, '--success', 'success')"
+    ></app-color-picker>
+
+    <app-color-picker
+      [label]="'Warning'"
+      (colorValue)="updateTheme($event, '--warning', 'warning')"
+    ></app-color-picker>
+
+    <app-color-picker
+      [label]="'Danger'"
+      (colorValue)="updateTheme($event, '--danger', 'danger')"
+    ></app-color-picker>
+  </div>
+</section>

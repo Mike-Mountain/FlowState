@@ -1,0 +1,12 @@
+.upload-files {
+  min-width: 80%;
+  height: max-content;
+  border: 1px solid var(--border-color);
+}
+
+.file {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}

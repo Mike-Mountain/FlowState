@@ -9,10 +9,10 @@
 .input {
   background: transparent;
   border: none;
-  border-bottom: 2px solid $light;
+  border-bottom: 2px solid var(--border-color);
   padding: .25rem;
-  color: $light;
+  color: var(--text);
   &:focus {
-    border-bottom-color: $primary;
+    border-bottom-color: var(--primary);
   }
 }

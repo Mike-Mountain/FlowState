@@ -8,6 +8,9 @@ export interface Theme {
   info: string;
   warning: string;
   danger: string;
+  pageBg: string;
+  cardBg: string;
+  textColor: string;
 }
 
 export function createTheme(params?: Partial<Theme>) {
@@ -20,6 +23,9 @@ export function createTheme(params?: Partial<Theme>) {
     success: params?.success,
     info: params?.info,
     warning: params?.warning,
-    danger: params?.danger
+    danger: params?.danger,
+    pageBg: params?.pageBg,
+    cardBg: params?.cardBg,
+    textColor: params?.textColor
   } as Theme;
 }

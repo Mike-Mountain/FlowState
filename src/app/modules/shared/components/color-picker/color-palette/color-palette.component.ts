@@ -21,7 +21,7 @@ export class ColorPaletteComponent implements OnInit, AfterViewInit, OnChanges {
 
   @ViewChild('canvas') private canvas: ElementRef<HTMLCanvasElement>;
 
-  @Output() colorChanged = new EventEmitter<string>();
+  @Output() colorChanged = new EventEmitter<{ color: string, colorValues: any }>();
 
   private ctx: CanvasRenderingContext2D;
   private mouseDown: boolean;
@@ -45,7 +45,7 @@ export class ColorPaletteComponent implements OnInit, AfterViewInit, OnChanges {
 
   ngAfterViewInit(): void {
     this.colorPickerService.getColorSlider().subscribe(hue => {
-      this.hue = hue;
+      this.hue = hue.color;
       setTimeout(() => {
         this.draw();
       }, 100);
@@ -120,9 +120,10 @@ export class ColorPaletteComponent implements OnInit, AfterViewInit, OnChanges {
 
   private getColorAtPosition(x: number, y: number) {
     const imageData = this.ctx.getImageData(x, y, 1, 1).data;
-    return (
-      'rgba(' + imageData[0] + ',' + imageData[1] + ',' + imageData[2] + ',1)'
-    );
+    return {
+      color: 'rgba(' + imageData[0] + ',' + imageData[1] + ',' + imageData[2] + ',1)',
+      colorValues: imageData[0] + ',' + imageData[1] + ',' + imageData[2]
+    };
   }
 
 }

@@ -44,67 +44,67 @@ a {
 }
 
 .bg-primary {
-  background-color: $primary !important
+  background-color: var(--primary) !important
 }
 
 a.bg-primary:focus, a.bg-primary:hover, button.bg-primary:focus, button.bg-primary:hover {
-  background-color: darken($primary, 10%) !important
+  background-color: rgba(var(--primaryValues), 0.4) !important
 }
 
 .bg-secondary {
-  background-color: $accent !important
+  background-color: var(--accent) !important
 }
 
 a.bg-secondary:focus, a.bg-secondary:hover, button.bg-secondary:focus, button.bg-secondary:hover {
-  background-color: darken($accent, 10%) !important
+  background-color: rgba(var(--accentValues), 0.4) !important
 }
 
 .bg-success {
-  background-color: $success !important
+  background-color: var(--success) !important
 }
 
 a.bg-success:focus, a.bg-success:hover, button.bg-success:focus, button.bg-success:hover {
-  background-color: darken($success, 10%) !important
+  background-color: rgba(var(--successValues), 0.4) !important
 }
 
 .bg-info {
-  background-color: $info !important
+  background-color: var(--info) !important
 }
 
 a.bg-info:focus, a.bg-info:hover, button.bg-info:focus, button.bg-info:hover {
-  background-color: darken($info, 10%) !important
+  background-color: rgba(var(--infoValues), 0.4) !important
 }
 
 .bg-warning {
-  background-color: $warning !important
+  background-color: var(--warning) !important
 }
 
 a.bg-warning:focus, a.bg-warning:hover, button.bg-warning:focus, button.bg-warning:hover {
-  background-color: darken($warning, 10%) !important
+  background-color: rgba(var(--warningValues), 0.4) !important
 }
 
 .bg-danger {
-  background-color: $danger !important
+  background-color: var(--danger) !important
 }
 
 a.bg-danger:focus, a.bg-danger:hover, button.bg-danger:focus, button.bg-danger:hover {
-  background-color: darken($danger, 10%) !important
+  background-color: rgba(var(--dangerValues), 0.4) !important
 }
 
 .bg-light {
-  background-color: $light !important
+  background-color: var(--light) !important
 }
 
 a.bg-light:focus, a.bg-light:hover, button.bg-light:focus, button.bg-light:hover {
-  background-color: darken($light, 10%) !important
+  background-color: rgba(var(--lightValues), 0.4) !important
 }
 
 .bg-dark {
-  background-color: $dark !important
+  background-color: var(--dark) !important
 }
 
 a.bg-dark:focus, a.bg-dark:hover, button.bg-dark:focus, button.bg-dark:hover {
-  background-color: darken($dark, 10%) !important
+  background-color: rgba(var(--darkValues), 0.4) !important
 }
 
 .bg-white {
@@ -156,35 +156,35 @@ a.bg-dark:focus, a.bg-dark:hover, button.bg-dark:focus, button.bg-dark:hover {
 }
 
 .border-primary {
-  border-color: $primary !important
+  border-color: var(--primary) !important
 }
 
 .border-secondary {
-  border-color: $accent !important
+  border-color: var(--accent) !important
 }
 
 .border-success {
-  border-color: $success !important
+  border-color: var(--success) !important
 }
 
 .border-info {
-  border-color: $info !important
+  border-color: var(--info) !important
 }
 
 .border-warning {
-  border-color: $warning !important
+  border-color: var(--warning) !important
 }
 
 .border-danger {
-  border-color: $danger !important
+  border-color: var(--danger) !important
 }
 
 .border-light {
-  border-color: $light !important
+  border-color: var(--light) !important
 }
 
 .border-dark {
-  border-color: $dark !important
+  border-color: var(--dark) !important
 }
 
 .border-white {
@@ -2821,71 +2821,71 @@ a.bg-dark:focus, a.bg-dark:hover, button.bg-dark:focus, button.bg-dark:hover {
 }
 
 .text-primary {
-  color: $primary !important
+  color: var(--primary) !important
 }
 
 a.text-primary:focus, a.text-primary:hover {
-  color: darken($primary, 10%) !important
+  color: rgba(var(--primaryValues), 0.4) !important
 }
 
 .text-secondary {
-  color: $accent !important
+  color: var(--accent) !important
 }
 
 a.text-secondary:focus, a.text-secondary:hover {
-  color: darken($accent, 10%) !important
+  color: rgba(var(--accentValues), 0.4) !important
 }
 
 .text-success {
-  color: $success !important
+  color: var(--success) !important
 }
 
 a.text-success:focus, a.text-success:hover {
-  color: darken($success, 10%) !important
+  color: rgba(var(--successValues), 0.4) !important
 }
 
 .text-info {
-  color: $info !important
+  color: var(--info) !important
 }
 
 a.text-info:focus, a.text-info:hover {
-  color: darken($info, 10%) !important
+  color: rgba(var(--infoValues), 0.4) !important
 }
 
 .text-warning {
-  color: $warning !important
+  color: var(--warning) !important
 }
 
 a.text-warning:focus, a.text-warning:hover {
-  color: darken($warning, 10%) !important
+  color: rgba(var(--warningValues), 0.4) !important
 }
 
 .text-danger {
-  color: $danger !important
+  color: var(--danger) !important
 }
 
 a.text-danger:focus, a.text-danger:hover {
-  color: darken($danger, 10%) !important
+  color: rgba(var(--dangerValues), 0.4) !important
 }
 
 .text-light {
-  color: $light !important
+  color: var(--light) !important
 }
 
 a.text-light:focus, a.text-light:hover {
-  color: darken($light, 10%) !important
+  color: rgba(var(--lightValues), 0.4) !important
 }
 
 .text-dark {
-  color: $dark !important
+  color: var(--dark) !important
 }
 
 a.text-dark:focus, a.text-dark:hover {
-  color: darken($dark, 10%) !important
+  color: rgba(var(--darkValues), 0.4) !important
 }
 
 .text-body {
-  color: #212529 !important
+  color: var(--page-bg) !important
 }
 
 .text-muted {

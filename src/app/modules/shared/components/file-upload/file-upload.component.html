@@ -1,0 +1,32 @@
+<input
+  #file
+  multiple
+  type="file"
+  class="d-none"
+  (change)="addFiles($event, fileUploadContainer)"
+>
+
+<button class="button primary-button" type="button" (click)="openFileUploader(file)">Upload</button>
+
+<ng-template #fileUploadContainer>
+  <div class="upload-files">
+    <ng-container *ngFor="let file of files">
+      <figure class="file" *ngIf="progress[file.name].progress | async as progress">
+        <h4>{{file.name}}</h4>
+        <progress max="100" [id]="'progress' + file.name" [value]="progress">{{progress}}%</progress>
+      </figure>
+    </ng-container>
+    <div class="file-upload-actions">
+      <button *ngIf="showCancelButton" class="button">
+        Cancel
+      </button>
+      <button
+        [disabled]="!canBeClosed"
+        (click)="closeDialog()"
+        class="button primary-button"
+      >
+        {{primaryButtonText}}
+      </button>
+    </div>
+  </div>
+</ng-template>
