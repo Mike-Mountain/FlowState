@@ -1,0 +1,55 @@
+@import "../../mixins/buttons";
+
+// __________Outline Buttons__________ //
+.button-outline-primary {
+  @include button-outline-color(var(--primary));
+  &:hover {
+    color: var(--light);
+  }
+}
+
+.button-outline-accent {
+  @include button-outline-color(var(--accent));
+  &:hover {
+    color: var(--light);
+  }
+}
+.button-outline-info {
+  @include button-outline-color(var(--info));
+  &:hover {
+    color: var(--light);
+  }
+}
+
+.button-outline-success {
+  @include button-outline-color(var(--success));
+  &:hover {
+    color: var(--dark);
+  }
+}
+.button-outline-warning {
+  @include button-outline-color(var(--warning));
+  &:hover {
+    color: var(--dark);
+  }
+}
+
+.button-outline-danger {
+  @include button-outline-color(var(--danger));
+  &:hover {
+    color: var(--light);
+  }
+}
+.button-outline-light {
+  @include button-outline-color(var(--light));
+  &:hover {
+    color: var(--dark);
+  }
+}
+
+.button-outline-dark {
+  @include button-outline-color(var(--dark));
+  &:hover {
+    color: var(--light);
+  }
+}

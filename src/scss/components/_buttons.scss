@@ -1,5 +1,3 @@
-@import "../variables/theme-colours";
-
 .button {
   min-height: 2rem;
   min-width: 4rem;
@@ -8,6 +6,7 @@
   cursor: pointer;
   transition: .1s linear;
   font-size: .8rem;
+
   &:hover {
     color: var(--light);
     background: var(--dark);
@@ -18,22 +17,4 @@
   min-height: 1.5rem;
   min-width: 2rem;
   font-size: .6rem;
-}
-
-.primary-button {
-  border-color: var(--primary);
-  color: var(--primary);
-  &:hover {
-    color: var(--light);
-    background: var(--primary);
-  }
-}
-
-.button-dark {
-  border-color: var(--dark);
-  color: var(--dark);
-  &:hover {
-    color: var(--light);
-    background: var(--dark);
-  }
 }

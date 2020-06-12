@@ -35,12 +35,21 @@ export class FooterComponent implements OnInit {
   toggleVitaePanel(section: string) {
     let state: LayoutState;
     if (this.layoutService.activeVitaeTab !== section) {
-      state = {
-        ...this.layoutState,
-        bottomPanelHeight: 60,
-        contentPanelHeight: 40,
-        sidePanelHeight: 40
-      };
+      if (section === 'admin') {
+        state = {
+          ...this.layoutState,
+          bottomPanelHeight: 80,
+          contentPanelHeight: 20,
+          sidePanelHeight: 20
+        };
+      } else {
+        state = {
+          ...this.layoutState,
+          bottomPanelHeight: 50,
+          contentPanelHeight: 50,
+          sidePanelHeight: 50
+        };
+      }
       this.layoutService.updateLayoutState(state);
       this.layoutService.updateActiveTab(section);
       this.layoutService.activeVitaeTab = section;

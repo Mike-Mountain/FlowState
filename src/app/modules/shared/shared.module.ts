@@ -22,7 +22,7 @@ import { ResizeDirective } from './directives/resize/resize.directive';
     TextColorDirective,
     FileUploadComponent,
     DialogComponent,
-    ResizeDirective
+    ResizeDirective,
   ],
   exports: [
     SpinnerComponent,

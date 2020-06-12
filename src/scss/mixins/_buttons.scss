@@ -1,0 +1,23 @@
+@mixin button-outline-color($color) {
+  border-color: $color;
+  color: $color;
+  &:hover {
+    background: $color;
+  }
+}
+
+@mixin button-color($color) {
+  background-color: $color;
+  &:hover {
+    color: $color;
+    border-color: $color;
+  }
+}
+
+// TODO: Set the text color dynamically
+//@if(lightness($color > 50)) {
+//  color: var(--dark) !important;
+//} @else {
+//  color: var(--light) !important;
+//}
+

@@ -6,7 +6,7 @@
   (change)="addFiles($event, fileUploadContainer)"
 >
 
-<button class="button primary-button" type="button" (click)="openFileUploader(file)">Upload</button>
+<button class="button button-primary" type="button" (click)="openFileUploader(file)">Upload</button>
 
 <ng-template #fileUploadContainer>
   <div class="upload-files">
@@ -23,7 +23,7 @@
       <button
         [disabled]="!canBeClosed"
         (click)="closeDialog()"
-        class="button primary-button"
+        class="button button-primary"
       >
         {{primaryButtonText}}
       </button>

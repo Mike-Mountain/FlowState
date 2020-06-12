@@ -1,8 +1,8 @@
 <p>landing works!</p>
-<button class="button primary-button" (click)="open(modalContent)">Open Modal</button>
+<button class="button button-light" (click)="open(modalContent)">Open Modal</button>
 
 <ng-template #modalContent>
-  <button class="button" (click)="close()">close</button>
+  <button class="button button-danger" (click)="close()">close</button>
   <div class="flex-center w-100 h-100 modal-content">
     <p>Modal Dialog Works!</p>
   </div>

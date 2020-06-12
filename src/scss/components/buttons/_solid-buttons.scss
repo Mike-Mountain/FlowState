@@ -1,0 +1,42 @@
+@import "../../mixins/buttons";
+
+// __________Solid Buttons__________ //
+.button-primary {
+  @include button-color(var(--primary));
+  color: var(--light);
+}
+
+.button-accent {
+  @include button-color(var(--accent));
+  color: var(--light);
+}
+
+.button-info {
+  @include button-color(var(--info));
+  color: var(--light);
+}
+
+.button-success {
+  @include button-color(var(--success));
+  color: var(--dark);
+}
+
+.button-warning {
+  @include button-color(var(--warning));
+  color: var(--dark);
+}
+
+.button-danger {
+  @include button-color(var(--danger));
+  color: var(--light);
+}
+
+.button-light {
+  @include button-color(var(--light));
+  color: var(--dark);
+}
+
+.button-dark {
+  @include button-color(var(--dark));
+  color: var(--light);
+}
