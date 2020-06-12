@@ -1,0 +1,40 @@
+%resize-helper {
+  position: absolute;
+  margin: auto;
+  background: white;
+}
+
+%resize-helper-horizontal {
+  @extend %resize-helper;
+  height: .1rem;
+  width: 100%;
+  cursor: row-resize;
+}
+
+%resize-helper-vertical {
+  @extend %resize-helper;
+  top: 0;
+  height: 100%;
+  width: .1rem;
+  cursor: col-resize;
+}
+
+.resize-helper-top {
+  @extend %resize-helper-horizontal;
+  top: 0;
+}
+
+.resize-helper-left {
+  @extend %resize-helper-vertical;
+  left: 0;
+}
+
+.resize-helper-bottom {
+  @extend %resize-helper-horizontal;
+  bottom: 0;
+}
+
+.resize-helper-right {
+  @extend %resize-helper-vertical;
+  right: 0;
+}

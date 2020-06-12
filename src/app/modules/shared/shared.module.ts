@@ -9,6 +9,7 @@ import {TextColorDirective} from './directives/text-color/text-color.directive';
 import {FileUploadComponent} from './components/file-upload/file-upload.component';
 import {DialogComponent} from './components/dialog/dialog.component';
 import {OverlayModule} from '@angular/cdk/overlay';
+import { ResizeDirective } from './directives/resize/resize.directive';
 
 
 @NgModule({
@@ -20,13 +21,15 @@ import {OverlayModule} from '@angular/cdk/overlay';
     ColorPaletteComponent,
     TextColorDirective,
     FileUploadComponent,
-    DialogComponent
+    DialogComponent,
+    ResizeDirective
   ],
   exports: [
     SpinnerComponent,
     AuthenticatedWithRoleDirective,
     ColorPickerComponent,
     FileUploadComponent,
+    ResizeDirective,
   ],
   imports: [
     CommonModule,

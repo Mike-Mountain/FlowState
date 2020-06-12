@@ -24,6 +24,7 @@ export class LayoutService {
     contentNavigationHeight: 0,
     bottomPanelHeight: 0
   };
+
   private initialSideState: PanelState = {
     projects: true,
     blog: false,

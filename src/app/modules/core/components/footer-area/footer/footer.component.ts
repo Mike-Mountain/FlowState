@@ -37,9 +37,9 @@ export class FooterComponent implements OnInit {
     if (this.layoutService.activeVitaeTab !== section) {
       state = {
         ...this.layoutState,
-        bottomPanelHeight: 40,
-        contentPanelHeight: 60,
-        sidePanelHeight: 60
+        bottomPanelHeight: 60,
+        contentPanelHeight: 40,
+        sidePanelHeight: 40
       };
       this.layoutService.updateLayoutState(state);
       this.layoutService.updateActiveTab(section);
