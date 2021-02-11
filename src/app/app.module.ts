@@ -26,7 +26,7 @@ import {TokenInterceptor} from './modules/core/interceptors/token.interceptor';
   providers: [
     {
       provide: NG_ENTITY_SERVICE_CONFIG,
-      useValue: {baseUrl: 'http://localhost:1337'}
+      useValue: {baseUrl: environment.apiUrl}
     },
     {
       provide: HTTP_INTERCEPTORS,
