@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {SessionQuery} from '../../../core/stores/session/session.query';
+import {User} from '../../../core/stores/session/session.model';
+import {Observable} from 'rxjs';
 
 @Component({
   selector: 'app-admin-home',
@@ -7,9 +10,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdminHomeComponent implements OnInit {
 
-  constructor() { }
+  user: Observable<User>;
+
+  constructor(private sessionQuery: SessionQuery) {
+  }
 
   ngOnInit(): void {
+    this.user = this.sessionQuery.getUser();
   }
 
 }

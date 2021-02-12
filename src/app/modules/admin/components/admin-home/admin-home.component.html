@@ -1,1 +1,9 @@
-<p>admin-home works!</p>
+<section class="admin-dash" *ngIf="user | async as user">
+  <h1 class="text-center">Welcome {{user.username}}</h1>
+  <hr class="w-80 mx-auto border-light">
+  <nav class="admin-home-nav mt-2">
+    <a class="side-nav-link flex-center">Projects</a>
+    <a class="side-nav-link flex-center">Blog</a>
+    <a class="side-nav-link flex-center">Favourites</a>
+  </nav>
+</section>
